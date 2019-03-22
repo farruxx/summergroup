@@ -5,7 +5,16 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-
+import check from '../img/check.svg'
+import bola from '../img/bola.svg'
+import catalog from '../img/catalog.png'
+import Contact from '../pages/contact/';
+import Download from '../pages/contact/donwload';
+const data = [
+  'Сифатли ва чидамли',
+  'Шубани алмаштириб қайта ишлатиш мумкин',
+  'Катта миқдорда етказиш',
+]
 export const IndexPageTemplate = ({
   image,
   title,
@@ -16,104 +25,87 @@ export const IndexPageTemplate = ({
   intro,
   main,
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
+    <div>
       <div
+        className="full-width-image margin-top-0"
         style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
+          backgroundPosition: `top left`,
+          backgroundAttachment: `fixed`,
         }}
       >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+        <div
           style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
+            display: 'flex',
             lineHeight: '1',
-            padding: '0.25em',
+            marginTop: 140,
+            justifyContent: 'space-around',
+            alignItems: 'left',
+            flexDirection: 'column',
           }}
         >
-          {title}
-        </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+          <h1
+            className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+            style={{
+              color: 'black',
+              lineHeight: '1',
+              padding: '0.25em',
+              textAlign: 'center'
+            }}
+          >
+            {title}
+          </h1>
+          <div style={{ padding: 16 }}>
+            {data.map(d => (<div class="features">
+              <img
+                src={check}
+                alt="check"
+              />
+              <h3 className="has-text-weight-bold" style={{ marginLeft: 16 }}>{d}</h3>
+            </div>))
+            }
+          </div>
+          <img
+            src={bola}
+            alt="image"
+            style={{ height: 220, alignSelf: 'center', }}
+          />
+        </div>
       </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+      <section className="section section--gradient" >
+        <div className="container" >
+          <div className="section">
+            <div className="columns">
+              <div className="column is-10 is-offset-1" >
+                <div className="content" >
+                  <div className="content">
+                    <div className="tile" style={{ marginTop: 64 }}>
+                      <h1 className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+                        style={{
+                          color: 'black',
+                          lineHeight: '1',
+                          padding: '0.25em',
+                          textAlign: 'center'
+                        }}>{mainpitch.title}</h1>
+                    </div>
+                    <img
+                      src={catalog}
+                      alt="image"
+                      style={{ alignSelf: 'center' }}
+                    />
+                    <h3 className="is-size-6-mobile is-size-5-tablet is-size-4-widescreen"
+                      style={{ fontSize: 18, textAlign: 'center' }}>Махсулот каталоги ва нархларини юклаб олиш учун қуйидаги формани тўлдиринг ва <font style={{ color: 'red', fontSize: 20, fontWeight: 'bold' }}>Бепул</font> юклаб олинг!</h3>
+                    <Download />
                   </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-)
+      </section>
+      <Contact />
+    </div>
+  )
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),

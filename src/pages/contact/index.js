@@ -11,7 +11,7 @@ function encode(data) {
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { isValidated: false }
+    this.state = { isValidated: false, phone:'+9989' }
   }
 
   handleChange = e => {
@@ -35,11 +35,12 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <>
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1>Contact</h1>
+              <h1 style={{color:"red"}}>Ҳозироқ буюртма беришни истайсизми?</h1>
+              <h4>Маълумотни киритиб буюртма беринг</h4>
               <form
                 name="contact"
                 method="post"
@@ -48,7 +49,7 @@ export default class Index extends React.Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                {/* The form-name hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="contact" />
                 <div hidden>
                   <label>
@@ -57,12 +58,13 @@ export default class Index extends React.Component {
                   </label>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'name'}>
-                    Your name
+                <label className="label" htmlFor={'phone'}>
+                Исмингиз
                   </label>
                   <div className="control">
                     <input
                       className="input"
+                      placeholder={""}
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -72,27 +74,30 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'email'}>
-                    Email
+                <label className="label" htmlFor={'phone'}>
+                Телефон рақамингиз
                   </label>
                   <div className="control">
                     <input
                       className="input"
-                      type={'email'}
-                      name={'email'}
+                      placeholder={"+998"}
+                      type={'phone'}
+                      name={'phone'}
+                      value={this.state.phone}
                       onChange={this.handleChange}
-                      id={'email'}
+                      id={'phone'}
                       required={true}
                     />
                   </div>
                 </div>
                 <div className="field">
-                  <label className="label" htmlFor={'message'}>
-                    Message
+                <label className="label" htmlFor={'phone'}>
+                Буюртма тури
                   </label>
                   <div className="control">
                     <textarea
                       className="textarea"
+                      placeholder={""}
                       name={'message'}
                       onChange={this.handleChange}
                       id={'message'}
@@ -101,15 +106,16 @@ export default class Index extends React.Component {
                   </div>
                 </div>
                 <div className="field">
-                  <button className="button is-link" type="submit">
-                    Send
+                  <button className="button is-link" type="submit"
+                  style={{background:"red"}}>
+                  БУЮРТМА БЕРИШ
                   </button>
                 </div>
               </form>
             </div>
           </div>
         </section>
-      </Layout>
+      </>
     )
   }
 }

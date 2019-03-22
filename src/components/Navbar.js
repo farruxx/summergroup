@@ -35,19 +35,19 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+        className="navbar"
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand" style={{display:'flex', flex: 1, justifyContent:'space-between'}}>
+        <div className="container" >
+          <div className="navbar-brand" style={{display:'flex', backgroundColor: 'black', flex: 1, justifyContent:'space-between'}}>
             <Link to="/" className="navbar-item" title="Summergroup">
-              <img src={logo} alt="Summergroup" style={{ width: "188px" }} />
+              <img src={logo} alt="Summergroup" style={{ width: "1 08px" }} />
             </Link>
-            <div style={{margin: 20}}>
-              <p>Мурожаат учун:</p>
-              <p>+99899 8865646</p>
-              <p>@summergroup</p>
+            <div style={{margin: 20, display:'flex', alignItems:'flex-end', flexDirection:'column'}}>
+              <p style={{color: 'white'}}>Мурожаат учун:</p>
+              <a  style={{color: 'white'}} href="tel:+998998865646">+99899 8865646</a>
+              <a  style={{color: 'white'}} href="https://t.me/summergroup">@summergroup</a>
             </div>
             </div>
             </div>

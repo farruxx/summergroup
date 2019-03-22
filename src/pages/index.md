@@ -1,16 +1,16 @@
 ---
 templateKey: 'index-page'
-title: 'Great coffee with a conscience'
+title: 'МАЛЯРНЫЙ ВАЛИКЛАР ИШЛАБ ЧИҚАРАМИЗ'
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
+heading: МАЛЯРНЫЙ ВАЛИКЛАР ИШЛАБ ЧИҚАРАМИЗ
+subheading: Сифатли маҳсулот арзон нархларда
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
 mainpitch:
-  title: Why Kaldi
+  title: МАҲСУЛОТ КАТАЛОГИ
   description: >
       Kaldi is the coffee store for everyone who believes that
       great coffee shouldn't just taste good, it should do good
