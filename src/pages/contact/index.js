@@ -39,7 +39,7 @@ export default class Index extends React.Component {
         <section className="section">
           <div className="container">
             <div className="content">
-              <h1 style={{color:"red"}}>Ҳозироқ буюртма беришни истайсизми?</h1>
+              <h1 style={{color:"red", textAlign: 'center'}}>Ҳозироқ буюртма беришни истайсизми?</h1>
               <h4>Маълумотни киритиб буюртма беринг</h4>
               <form
                 name="contact"
@@ -109,6 +109,11 @@ export default class Index extends React.Component {
                   <button className="button is-link" type="submit"
                   style={{background:"red"}}>
                   БУЮРТМА БЕРИШ
+                  </button>
+                </div>
+                <div className="field">
+                  <button className="button light" type="submit">
+                  +99899 8865646
                   </button>
                 </div>
               </form>

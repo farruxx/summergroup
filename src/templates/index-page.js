@@ -10,6 +10,7 @@ import bola from '../img/bola.svg'
 import catalog from '../img/catalog.png'
 import Contact from '../pages/contact/';
 import Download from '../pages/contact/donwload';
+import Muammo from './Muammo';
 const data = [
   'Сифатли ва чидамли',
   'Шубани алмаштириб қайта ишлатиш мумкин',
@@ -93,9 +94,10 @@ export const IndexPageTemplate = ({
                       style={{ alignSelf: 'center' }}
                     />
                     <h3 className="is-size-6-mobile is-size-5-tablet is-size-4-widescreen"
-                      style={{ fontSize: 18, textAlign: 'center' }}>Махсулот каталоги ва нархларини юклаб олиш учун қуйидаги формани тўлдиринг ва <font style={{ color: 'red', fontSize: 20, fontWeight: 'bold' }}>Бепул</font> юклаб олинг!</h3>
+                      style={{ fontSize: 18, textAlign: 'center', color:'black' }}>Махсулот каталоги ва нархларини юклаб олиш учун қуйидаги формани тўлдиринг ва <font style={{ color: 'red', fontSize: 20, fontWeight: 'bold' }}>Бепул</font> юклаб олинг!</h3>
                     <Download />
                   </div>
+                  <Muammo />
 
                 </div>
               </div>
