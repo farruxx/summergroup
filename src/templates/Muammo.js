@@ -23,7 +23,8 @@ const Muammo = class extends React.Component {
                     return <div style={{alignItems: 'center', display: 'flex', flexDirection: 'row', margin: 10 }}>
                             <div style={{ color: "#00ff00", fontSize: 55 }}>{i + 1} </div>
                             <img src={undov} alt="Summergroup" style={{ alignItems: 'center', width: 18, height: 18, marginLeft: -21 }} />
-                            <div style={{margin: 15 }}>{x}</div>
+                            <div className="has-text-weight-bold is-size-6-mobile is-size-5-tablet is-size-6-widescreen"
+                            style={{margin: 15 }}>{x}</div>
                         </div>
                 })}
             </div>
