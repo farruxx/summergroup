@@ -15,8 +15,8 @@ const Muammo = class extends React.Component {
         return (<div style={{display:'flex',flexDirection:'column', marginTop: 32}}>
         <div style={{alignItems:'center', display:'flex',flexDirection:'column',}}>
             <h5 style={{textAlign: 'center'}}>БОШҚАЛАР БИЛАН ИШЛАГАН МИЗОЗЛАРДА ТЕЗ-ТЕЗ УЧРАЙДИГАН</h5>
-            <h1 className={"has-text-weight-bold is-size-5-mobile is-size-4-tablet is-size-3-widescreen"}
-                 style={{textAlign:'center', fontSize:35, marginTop: -10}}>5 ТА МУАММО</h1>
+            <h1 className={"has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"}
+                 style={{textAlign:'center', marginTop: -10}}>5 ТА МУАММО</h1>
         </div>
             <div>
                 {xatolar.map((x, i) => {

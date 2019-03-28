@@ -11,6 +11,7 @@ import catalog from '../img/catalog.png'
 import Contact from '../pages/contact/';
 import Download from '../pages/contact/donwload';
 import Muammo from './Muammo';
+import Ustun from './Ustun';
 const data = [
   'Сифатли ва чидамли',
   'Шубани алмаштириб қайта ишлатиш мумкин',
@@ -98,6 +99,7 @@ export const IndexPageTemplate = ({
                     <Download />
                   </div>
                   <Muammo />
+                  <Ustun />
 
                 </div>
               </div>
