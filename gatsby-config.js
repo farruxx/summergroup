@@ -51,8 +51,8 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 2048,
             },
-          },Summergroup
-          {
+          },
+           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'static',
