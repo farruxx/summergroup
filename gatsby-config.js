@@ -2,9 +2,9 @@ var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify CMS Starter',
+    title: 'Summergroup',
     description:
-      'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+      'МАЛЯРНЫЙ ВАЛИКЛАР ИШЛАБ ЧИҚАРАМИЗ Сифатли ва чидамли Шубани алмаштириб қайта ишлатиш мумкин Катта миқдорда етказиш',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -52,7 +52,7 @@ module.exports = {
               maxWidth: 2048,
             },
           },
-          {
+           {
             resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: 'static',
