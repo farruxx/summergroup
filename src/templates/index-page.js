@@ -98,6 +98,7 @@ export const IndexPageTemplate = ({
                     <Download />
                   </div>
                   <Muammo />
+                  <Contact />
 
                 </div>
               </div>
@@ -105,7 +106,6 @@ export const IndexPageTemplate = ({
           </div>
         </div>
       </section>
-      <Contact />
     </div>
   )
 

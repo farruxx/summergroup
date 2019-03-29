@@ -1,13 +1,34 @@
+const http = require('http');
 // For more info, check https://www.netlify.com/docs/functions/#javascript-lambda-functions
 export function handler(event, context, callback) {
-    console.log("queryStringParameters", event.queryStringParameters)
-    callback(null, {
-      // return null to show no errors
-      statusCode: 200, // http status code
-      body: JSON.stringify({
-        msg: "Hello, World! " + Math.round(Math.random() * 10),
-      }),
-    })
+    // console.log("queryStringParameters", event.queryStringParameters)
+    // callback(null, {
+    //   // return null to show no errors
+    //   statusCode: 200, // http status code
+    //   body: JSON.stringify({
+    //     msg: "Hello, World! " + Math.round(Math.random() * 10),
+    //   }),
+    // })
+    new Promise((resolve, reject) => {
+      const options = {
+          host: 'api.telegram.org',
+          path: '/bot672568768:AAEjxcuQ73tA5-fcNzQaVEr9WqFD5C2VvZY/sendMessage?chat_id=farruxtestchannel&text=[MY_MESSAGE_TEXT]',
+          port: 80,
+          method: 'GET'
+      };
+
+      const req = http.request(options, (res) => {
+        resolve('Success');
+      });
+
+      req.on('error', (e) => {
+        reject(e.message);
+      });
+
+      // send the request
+      req.write('');
+      req.end();
+  });
   }
 
   // Now you are ready to access this API from anywhere in your Gatsby app! For example, in any event handler or lifecycle method, insert:

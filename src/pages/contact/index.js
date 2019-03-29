@@ -36,10 +36,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <>
-        <section className="section">
-          <div className="container">
-            <div className="content">
-              <h1 style={{color:"red", textAlign: 'center'}}>Ҳозироқ буюртма беришни истайсизми?</h1>
+              <h2 style={{color:"red", textAlign: 'center'}}>Ҳозироқ буюртма беришни истайсизми?</h2>
               <h4>Маълумотни киритиб буюртма беринг</h4>
               <form
                 name="contact"
@@ -117,9 +114,6 @@ export default class Index extends React.Component {
                   </button>
                 </div>
               </form>
-            </div>
-          </div>
-        </section>
       </>
     )
   }
