@@ -1,4 +1,4 @@
-const http = require('http');
+const https = require('https');
 // For more info, check https://www.netlify.com/docs/functions/#javascript-lambda-functions
 export function handler(event, context, callback) {
     // console.log("queryStringParameters", event.queryStringParameters)
@@ -17,7 +17,7 @@ export function handler(event, context, callback) {
           method: 'GET'
       };
 
-      const req = http.request(options, (res) => {
+      const req = https.request(options, (res) => {
         resolve('Success');
       });
 
