@@ -16,7 +16,7 @@ export function handler(event, context, callback) {
   };
 
   const req = https.request(options, (res) => {
-    callback(res);
+    callback(JSON.stringify(res));
   });
 
   req.on('error', (e) => {
