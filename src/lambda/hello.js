@@ -11,7 +11,7 @@ export function handler(event, context, callback) {
   // })
   const options = {
     host: 'api.telegram.org',
-    path: '/bot672568768:AAEjxcuQ73tA5-fcNzQaVEr9WqFD5C2VvZY/sendMessage?chat_id=farruxtestchannel&text=[MY_MESSAGE_TEXT]',
+    path: '/bot690794687:AAH_q9FsEQX08AJ_XYDvSzOJHczK-_CyvNk/sendMessage?chat_id=-100356267249&text=nima_gap',
     method: 'GET'
   };
   var body = ''
