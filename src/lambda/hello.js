@@ -16,7 +16,7 @@ export function handler(event, context, callback) {
   };
 
   const req = https.request(options, (res) => {
-    callback('Blah');
+    callback(res);
   });
 
   req.on('error', (e) => {
