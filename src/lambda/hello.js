@@ -9,27 +9,24 @@ export function handler(event, context, callback) {
     //     msg: "Hello, World! " + Math.round(Math.random() * 10),
     //   }),
     // })
-   new Promise((resolve, reject) => {
+    const options = {
+      host: 'api.telegram.org',
+      path: '/bot672568768:AAEjxcuQ73tA5-fcNzQaVEr9WqFD5C2VvZY/sendMessage?chat_id=farruxtestchannel&text=[MY_MESSAGE_TEXT]',
+      method: 'GET'
+  };
 
-      const options = {
-          host: 'api.telegram.org',
-          path: '/bot672568768:AAEjxcuQ73tA5-fcNzQaVEr9WqFD5C2VvZY/sendMessage?chat_id=farruxtestchannel&text=[MY_MESSAGE_TEXT]',
-          method: 'GET'
-      };
-
-      const req = https.request(options, (res) => {
-        resolve('Success');
-        context.succeed('Blah');
-      });
-
-      req.on('error', (e) => {
-        reject(e.message);
-      });
-
-      // send the request
-      req.write('');
-      req.end();
+  const req = https.request(options, (res) => {
+    resolve('Success');
+    context.succeed('Blah');
   });
+
+  req.on('error', (e) => {
+    reject(e.message);
+  });
+
+  // send the request
+  req.write('');
+  req.end();
   }
 
   // Now you are ready to access this API from anywhere in your Gatsby app! For example, in any event handler or lifecycle method, insert:
