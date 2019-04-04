@@ -16,12 +16,11 @@ export function handler(event, context, callback) {
   };
 
   const req = https.request(options, (res) => {
-    resolve('Success');
     callback('Blah');
   });
 
   req.on('error', (e) => {
-    reject(e.message);
+    callback(e.message);
   });
 
   // send the request
