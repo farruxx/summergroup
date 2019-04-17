@@ -12,7 +12,7 @@ export function handler(event, context, callback) {
   const options = {
     host: 'api.telegram.org',
     path: '/bot690794687:AAH_q9FsEQX08AJ_XYDvSzOJHczK-_CyvNk/sendMessage?'
-    +'chat_id=-356267249&text='+ event.body,
+    +'chat_id=-356267249&text='+ encodeURIComponent(event.body),
     method: 'GET'
   };
   var body = ''
