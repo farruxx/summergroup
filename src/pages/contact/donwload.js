@@ -92,7 +92,7 @@ export default class Index extends React.Component {
                 <img
             src={download}
             alt="image"
-            style={{ height: 15,marginRight:5, alignSelf: 'center', }}
+            style={{ height: 15,marginRight:5, alignSelf: 'center',dataNetlify:true }}
           />БЕПУЛ ЮКЛАБ ОЛИШ
                   </button>
           </div>

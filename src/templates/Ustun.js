@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import bolt from "../img/bolt.svg"
 import mustahkam from "../img/mustahkam.svg"
 import qulay from "../img/qulay.svg"
 import arzon from "../img/arzon.svg"
 import chegirma from "../img/chegirma.svg"
+import './knopka.css'
 
 const ustun = [{
     text: "Шуба сифатли",
@@ -31,10 +31,10 @@ const ustun = [{
 
 const Ustun = class extends React.Component {
     render() {
-        return (<div style={{alignItems:'center', display: 'flex',flexDirection:'column',marginTop: 40 }}>
+        return (<div style={{ alignItems: 'center', display: 'flex', flexDirection: 'column', marginTop: 40 }}>
             <div>
                 <h1 className={"has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"}
-                 style={{textAlign:'center'}}>УСТУНЛИГИМИЗ НИМАДА?</h1>
+                    style={{ textAlign: 'center' }}>УСТУНЛИГИМИЗ НИМАДА?</h1>
             </div>
             <div>
                 {ustun.map((u) => {
@@ -43,9 +43,15 @@ const Ustun = class extends React.Component {
                         <div style={{ margin: 10 }}
                             className={"has-text-weight-bold is-size-6-mobile is-size-5-tablet is-size-6-widescreen"}>
                             {u.text} <div>{u.text1}</div></div>
-
                     </div>
                 })}
+            </div>
+            <div className="footer-call">
+                <a href="+998911377816" class="phone">
+                    <i class="i i-phone">
+                    </i>
+                    Qo'ng'iroq
+                 </a>
             </div>
         </div>
         )

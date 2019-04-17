@@ -1,0 +1,17 @@
+@media only screen and (max-width: 480px){
+    .footer-call .phone:hover {
+        background-color: #ffc956;
+    }
+    .footer-call .phone {
+        color: #12141a;
+        /* background-color: #ffc13c; */
+    }
+.footer-call {
+    position: fixed;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000px;
+}
+}
