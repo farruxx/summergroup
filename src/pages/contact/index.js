@@ -11,7 +11,7 @@ function encode(data) {
 export default class Index extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { isValidated: false, phone:'+9989' ,name:''}
+    this.state = { isValidated: false, phone:'+9989' ,name:'',message:''}
   }
 
   method(body){
@@ -19,10 +19,10 @@ export default class Index extends React.Component {
     console.log(body)
     fetch('https://summergroup.uz/.netlify/functions/hello', {  
         method: 'POST',  
-        headers: {  
-          "Content-type": "application/json"  
-        },  
-        body: JSON.stringify(body)
+        // headers: {  
+        //   "Content-type": "application/json"  
+        // },  
+        body:body
       })
       .then(function (response) {  
         return response.json()  
@@ -118,6 +118,7 @@ export default class Index extends React.Component {
                       className="textarea"
                       placeholder={""}
                       name={'message'}
+                      value={this.state.message}
                       onChange={this.handleChange}
                       id={'message'}
                       required={true}
@@ -129,13 +130,11 @@ export default class Index extends React.Component {
                   <button className="button is-link" type="submit"
                   style={{background:"red"}}
                   onClick={()=>{
-                    let body = {
-                      phone: this.state.phone,
-                      name:this.state.name,
-                  }
+                    let body = this.state.phone+"\n" + this.state.name+"\n"+ this.state.message
+                  
                     this.method(body)
                     this.setState({name:'',
-                  phone:''})
+                  phone:'',message:''})
                   }}>
                   БУЮРТМА БЕРИШ
                   </button>
