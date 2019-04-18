@@ -23,7 +23,7 @@ export function handler(event, context, callback) {
     });
     res.on('end', function () {
       console.log(body);
-      callback(body);
+      callback(null, body);
     });
   });
 
